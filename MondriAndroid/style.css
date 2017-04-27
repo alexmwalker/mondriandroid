@@ -1,0 +1,68 @@
+svg {
+  width: 65%;
+  float: left;
+  margin-right: 2%;
+
+  outline: 3px rgba(255,255,255,.3) dashed;
+}
+
+#newGraphicnumber {
+  font-family: Helvetica Neue;
+  font-weight: 700;
+  font-size: 20em;
+  opacity: .15;
+  fill: #fff;
+  transform: skew(-10deg); }
+
+#focalpoint {
+  fill: rbga(140, 45, 100, 0.5); }
+
+.frame {
+  transform: rotate(90deg);
+  transform-origin: 50% 50%;
+  fill-opacity: .7; }
+
+.focalpoint {
+  transform-origin: 50% 50% 0px; }
+
+.swatch {
+  height: 10;
+  width: 10; }
+
+.rotate-1 {
+  transform-origin: 50% 50%;
+  transform: rotate(1turn); }
+
+.patternA {
+  fill: url(#pattern-2-0);
+  mix-blend-mode: hard-light;
+  fill-opacity: 1; }
+
+.patternB {
+  fill: url(#pattern-2-0);
+  mix-blend-mode: hue;
+  fill-opacity: 1; }
+
+.paper {
+  fill: url(#pattern-paper);
+  mix-blend-mode: multiply;
+  fill-opacity: 1;
+  width: 1000;
+  height: 610; }
+
+g {
+  isolation: isolate;
+}
+
+table {
+    width: 60%;
+
+}
+td{
+   outline: 1px #ccc solid;
+    height: 2em;
+}
+svg text{
+ font-family: Georgia;
+  font-size: 4px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="CHANGE-ME">
+    <meta name="description" content="CHANGE-ME">
+    <!-- Mobile Stuff -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="CHANGE-ME">
+    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon.png">
+    <!-- Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="CHANGE-ME">
+    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+    <!-- Windows 8 -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="theme-color" content="#000000">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>CHANGE-ME</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'> </head>
+
+<body>
+    <!-- Insert your HTML here --><h2>Demo</h2>
+    <p>Type in the text box to try it: </p>
+    <fieldset>
+        <input type="text" /> </fieldset>
+    <p id=charCount></p>
+    <p id=original></p>
+    <!--<p id=reversed></p>-->
+
+    <!-- Scripts -->
+    <script>
+        /* A convenience function to reverse a string, and
+         * one to set the content of an element.
+
+        function reverse(s) {
+            return s.split('').reverse().join('')
+        }*/
+
+        function set(el, text) {
+            while (el.firstChild) el.removeChild(el.firstChild);
+            el.appendChild(document.createTextNode(text))
+        }
+        /* setupUpdater will be called once, on page load.
+         */
+        function setupUpdater() {
+            var input = document.getElementsByTagName('input')[0]
+                , count = document.getElementById('charCount')
+                , orig = document.getElementById('original')
+                , oldText = input.value
+                , timeout = null;
+            /* handleChange is called 50ms after the user stops
+               typing. */
+            function handleChange() {
+                var newText = input.value;
+                if (newText == oldText) return;
+                else oldText = newText;
+                set(reversed, reverse(newText));
+                set(count, 'You entered ' + newText.length + ' characters.');
+                set(orig, newText);
+            }
+            /* eventHandler is called on keyboard and mouse events.
+               If there is a pending timeout, it cancels it.
+               It sets a timeout to call handleChange in 50ms. */
+            function eventHandler() {
+                if (timeout) clearTimeout(timeout);
+                timeout = setTimeout(handleChange, 50);
+            }
+            input.onkeydown = input.onkeyup = input.onclick = eventHandler;
+        }
+        setupUpdater();
+        document.getElementsByTagName('input')[0].focus();
+    </script>
+</body>
+
+</html>
