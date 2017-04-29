@@ -10,17 +10,17 @@ var rotations = ['rotate-1', 'rotate-2', 'rotate-3'];
 
 
 
-var colors = ['#900', '#090', '#909'];
-var selectcolor = colors[Math.floor(Math.random() * colors.length)];
 
 var article= "15 Emerging Trends to Amp-up Your 3 Web Designs in 2017";
 var author = "Alex Walker ";
-var pubdate = "5/4/2017";
-var seed = "aa"; // Extra randomness
+var pubdate = "8/4/2017";
+var seed = "aaaaaaaaaaaaaaaa"; // Extra randomness if you don't like the default graphic
 
 var numbers_regex = /\d{1,2} /g;
 
 var numbers = article.match(numbers_regex).map(function(x){ return parseInt(x) });
+
+
 
 
 console.log(numbers);
@@ -112,7 +112,7 @@ var newElementGeoA2 = document.createElementNS(xmlns, 'use'); // large BG icon
 var newFPSVG = document.createElementNS(xmlns, 'svg'); // focalpoint grouping
 var newFrame = document.createElementNS(xmlns, 'circle'); // background rect
 var newBG = document.createElementNS(xmlns, 'rect'); // background rect
-var paper = document.createElementNS(xmlns, 'rect'); // background rect
+var paper = document.createElementNS(xmlns, 'rect'); // overlay paper texture
 
 var newGraphicnumber = document.createElementNS(xmlns, 'text');
 
@@ -135,7 +135,7 @@ setAttributes(newBG, {
 })
 
 setAttributes(paper, {
-  height: '610', x: '0', y: '0', class: "paper"
+  height: '610px', x: '0', y: '0', class: "paper"
 })
 
 setAttributes(newFPSVG, {
@@ -174,7 +174,7 @@ svg.appendChild(newGraphicnumber);
 
 var addnumber = document.querySelector("#newGraphicnumber");
 var numbertxt = document.createTextNode(numbers[0]);
-addnumber.appendChild(numbertxt);
+//addnumber.appendChild(numbertxt);
 
 svg.appendChild(paper); // Paper texture
 
@@ -200,6 +200,8 @@ var hash = document.querySelector("#hash");
 var hashTxt = document.createTextNode(titleHash);
 hash.appendChild(hashTxt);
 
+// dropping a table
+
 document.write("<table>");
 var hashArrLen = groupedArr.length;
 
@@ -213,3 +215,12 @@ document.write("</table>");
 
 document.write("<li>symbols.length: "+symbols.length+"</li>");
 document.write("<li>geometric.length: "+geometric.length+"</li>");
+document.write("<li>symbols.length: "+symbols.length+"</li>");
+document.write("<li>geometric.length: "+geometric.length+"</li>");
+
+var numberoffunctions = 5;
+var magicnumber = Math.ceil((numberoffunctions /255) * decimal[0]);
+
+
+document.write("<li>Decimal: "+decimal[0]+"</li>");
+document.write("<li>Magic number: "+magicnumber+"</li>");

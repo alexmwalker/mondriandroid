@@ -1,5 +1,5 @@
 svg {
-  width: 65%;
+  width: 90%;
   float: left;
   margin-right: 2%;
 
@@ -47,9 +47,9 @@ svg {
   fill: url(#pattern-paper);
   mix-blend-mode: multiply;
   fill-opacity: 1;
-  width: 1000;
-  height: 610; }
-
+  width: 1000px;
+  height: 610px;
+}
 g {
   isolation: isolate;
 }
