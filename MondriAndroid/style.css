@@ -34,14 +34,16 @@ svg {
   transform: rotate(1turn); }
 
 .patternA {
-  fill: url(#pattern-2-0);
-  mix-blend-mode: hard-light;
-  fill-opacity: 1; }
+  /*fill: url(#pattern-2-0);*/
+  fill: url(#g);
+  mix-blend-mode: multiply;
+  patternTransform: scale(.1);
+  fill-opacity: .3; }
 
 .patternB {
-  fill: url(#pattern-2-0);
-  mix-blend-mode: hue;
-  fill-opacity: 1; }
+  fill: url(#pattern-5-1);
+  mix-blend-mode: multiply;
+  fill-opacity: .2; }
 
 .paper {
   fill: url(#pattern-paper);

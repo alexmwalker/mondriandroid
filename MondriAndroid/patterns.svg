@@ -1,0 +1,32 @@
+<svg viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<defs>
+	<pattern height="100" id="a" patternunits="userSpaceOnUse" preserveaspectratio="none" viewbox="0 0 25 25" width="100">
+		<g transform="matrix(1.0, 0, 0, 1.0, -4.884919917458319e-7, 6.962807219679235e-7)">
+			<path d="M0 0h25v25H0z" fill="rgba(216, 216, 216, 0)"></path>
+			<ellipse cx="12.5" cy="12.5" fill="#040000" rx="7.5" ry="7.5"></ellipse>
+		</g>
+	</pattern>
+
+	<pattern height="100" id="c" patternunits="userSpaceOnUse" preserveaspectratio="none" viewbox="0 0 25 25" width="100">
+		<path d="M0 0h25v25H0z" fill="rgba(216, 216, 216, 0)"></path>
+		<path d="M0 0h4v25H0zM12 0h4v25h-4z" fill="#0C0000"></path>
+	</pattern>
+
+	<pattern height="100" id="d" patternunits="userSpaceOnUse" preserveaspectratio="none" viewbox="0 0 25 25" width="100">
+		<path d="M0 0h25v25H0z" fill="rgba(162, 96, 96, 0)"></path>
+		<path d="M6.51 3.378l3.536 3.535L6.51 10.45 2.976 6.912zM17.91 3.5l3.535 3.535-3.536 3.535-3.536-3.535zM6.862 14.254l3.536 3.535-3.536 3.535-3.535-3.536zM18.26 14.375l3.536 3.536-3.535 3.536-3.535-3.535z"></path>
+	</pattern>
+
+	<pattern height="100" id="b" patternunits="userSpaceOnUse" preserveaspectratio="none" viewbox="0 0 25 25.053" width="100">
+		<path d="M0 .053h25v25H0z" fill="rgba(216, 216, 216, 0)"></path>
+		<path d="M4.75 0l1.906 1.1-2.2 3.81-1.905-1.1zM9.288 6.086l1.905-1.1 2.2 3.81-1.905 1.1zM19.416 2.71l1.906-1.1 2.2 3.81-1.906 1.1zM4.263 11.022l1.905 1.1-2.2 3.81-1.905-1.1zM6.162 18.952l1.905-1.1 2.2 3.81-1.905 1.1zM16.382 11.083l1.905 1.1-2.2 3.81-1.905-1.1zM20.75 18.592l1.905 1.1-2.2 3.81-1.905-1.1z"></path>
+	</pattern>
+	<pattern id="e" patterntransform="matrix(0.01001, 0, 0, 0.01001, -0.06419, -0.06419)" xlink:href="#a"></pattern>
+	<pattern id="f" patterntransform="matrix(0.03115, 0, 0, 0.03363, 25.06018, 0.06018)" xlink:href="#b"></pattern>
+	<pattern id="g" patterntransform="matrix(0.01374, 0, 0, 0.01498, 50.06018, -0.18856)" xlink:href="#c"></pattern>
+	<pattern id="h" patterntransform="matrix(0.01622, 0, 0, 0.01622, 74.81144, -0.06419)" xlink:href="#d"></pattern>
+</defs>
+<path d="M0 0h25v25H0z" fill="url(#e)"></path>
+<path d="M25 0h25v25H25z" fill="url(#f)"></path>
+<path d="M50 0h25v25H50z" fill="url(#g)"></path>
+<path d="M75 0h25v25H75z" fill="url(#h)"></path></svg>

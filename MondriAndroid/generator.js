@@ -13,8 +13,8 @@ var rotations = ['rotate-1', 'rotate-2', 'rotate-3'];
 
 var article= "15 Emerging Trends to Amp-up Your 3 Web Designs in 2017";
 var author = "Alex Walker ";
-var pubdate = "8/4/2017";
-var seed = "aaaaaaaaaaaaaaaa"; // Extra randomness if you don't like the default graphic
+var pubdate = "8/5/2017";
+var seed = "aaaaaaaaaaaaaa"; // Extra randomness if you don't like the default graphic
 
 var numbers_regex = /\d{1,2} /g;
 
