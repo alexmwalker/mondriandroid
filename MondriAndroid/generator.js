@@ -1,31 +1,31 @@
-var symbols = ['#icon-scissors', '#icon-eye', '#icon-font', '#icon-sphere', '#icon-power-cord', '#icon-fire', '#icon-meter', '#icon-mail4', '#icon-html-five2', '#icon-css3', '#icon-embed2', '#icon-rocket', '#icon-gift', '#icon-trophy', '#icon-stats-bars', '#icon-stats-dots', '#icon-bug', '#icon-magic-wand', '#icon-pencil2', '#icon-quill', '#icon-pen', '#icon-eyedropper', '#icon-paint-format', '#icon-film', '#icon-pacman', '#icon-bullhorn', '#icon-binoculars', '#icon-wrench', '#icon-key2', '#icon-search', '#icon-quotes-right', '#icon-users', '#icon-bubbles2', '#icon-mobile', '#icon-laptop', '#icon-compass2', '#icon-display', '#icon-display', '#icon-cart', '#icon-ticket'];
+var symbols = ['#icon-scissors', '#icon-eye', '#icon-font', '#icon-sphere', '#icon-power-cord', '#icon-fire', '#icon-meter', '#icon-mail4', '#icon-html-five2', '#icon-css3', '#icon-embed2', '#icon-rocket', '#icon-gift', '#icon-trophy', '#icon-stats-bars', '#icon-stats-dots', '#icon-bug', '#icon-magic-wand', '#icon-pencil2', '#icon-quill', '#icon-pen', '#icon-eyedropper', '#icon-paint-format', '#icon-film', '#icon-pacman', '#icon-bullhorn', '#icon-binoculars', '#icon-wrench', '#icon-key2', '#icon-search', '#icon-quotes-right', '#icon-users', '#icon-bubbles2', '#icon-mobile', '#icon-laptop', '#icon-compass2',  '#icon-display', '#icon-cart', '#icon-ticket', '#icon-react'];
 
 var geometric = ['#icon-write', '#icon-wonder', '#icon-win', '#icon-weld', '#icon-wear', '#icon-watch', '#icon-wait', '#icon-use', '#icon-urbanize', '#icon-upload', '#icon-unlock', '#icon-undo', '#icon-type', '#icon-travel', '#icon-tower', '#icon-time', '#icon-target', '#icon-tag', '#icon-swim', '#icon-subtract', '#icon-strike', '#icon-store', '#icon-stop', '#icon-steam', '#icon-stamp', '#icon-stack', '#icon-spook', '#icon-spin', '#icon-sound', '#icon-solve', '#icon-smoke', '#icon-smell', '#icon-sleep', '#icon-sit', '#icon-shine', '#icon-send', '#icon-search2', '#icon-schedule', '#icon-scare', '#icon-saw', '#icon-save', '#icon-rule', '#icon-rewind', '#icon-resize', '#icon-report', '#icon-reply', '#icon-reflect', '#icon-redo', '#icon-record', '#icon-rain', '#icon-race', '#icon-push', '#icon-protect', '#icon-produce', '#icon-print', '#icon-primp', '#icon-press', '#icon-prank', '#icon-power', '#icon-point', '#icon-plug', '#icon-ping', '#icon-pin', '#icon-photograph', '#icon-perform', '#icon-pay', '#icon-pause', '#icon-open', '#icon-navigate', '#icon-narrow', '#icon-merge', '#icon-marry', '#icon-love', '#icon-lock', '#icon-locate', '#icon-load', '#icon-listen', '#icon-link', '#icon-lift', '#icon-launch', '#icon-label', '#icon-kiss', '#icon-kill', '#icon-keep', '#icon-join', '#icon-impregnate', '#icon-hurt', '#icon-home', '#icon-harvest', '#icon-hang', '#icon-hammer', '#icon-hack', '#icon-grow', '#icon-groom', '#icon-go', '#icon-give', '#icon-game', '#icon-gamble', '#icon-forward', '#icon-forbid', '#icon-flag', '#icon-fit', '#icon-finish', '#icon-find', '#icon-film2', '#icon-fight', '#icon-explore', '#icon-explode', '#icon-equal', '#icon-enter', '#icon-enlarge', '#icon-eat', '#icon-drown', '#icon-drive', '#icon-drink', '#icon-drill', '#icon-dream', '#icon-download', '#icon-divide', '#icon-dig', '#icon-die', '#icon-develop', '#icon-defend', '#icon-decorate', '#icon-dazzle', '#icon-cut', '#icon-cry', '#icon-crop', '#icon-create', '#icon-copy', '#icon-cook', '#icon-connect', '#icon-condemn', '#icon-collect', '#icon-code', '#icon-close', '#icon-climb', '#icon-clamber', '#icon-chop', '#icon-charge', '#icon-celebrate', '#icon-capture', '#icon-camp', '#icon-call', '#icon-calculate', '#icon-caffeinate', '#icon-build', '#icon-broadcast', '#icon-bookmark', '#icon-blow', '#icon-bloom', '#icon-blaze', '#icon-bite', '#icon-believe', '#icon-barbecue', '#icon-bake', '#icon-attract', '#icon-ask', '#icon-ascend', '#icon-arrest', '#icon-anchor', '#icon-alert', '#icon-alarm', '#icon-adjust', '#icon-add', '#icon-accommodate'];
 
-var rotations = ['rotate-1', 'rotate-2', 'rotate-3'];
+//var rotations = ['rotate-1', 'rotate-2', 'rotate-3'];
 
 // list of active symbols
 
 
-var testIcons = ['#icon-scissors', '#icon-eye', '#icon-font', '#icon-sphere', '#icon-power-cord']
+//var testIcons = ['#icon-scissors', '#icon-eye', '#icon-font', '#icon-sphere', '#icon-power-cord'];
 
 
 
 
 
 
-var article= "15 Emerging Trends to Amp-up Your rocket 3 Web Designs in 2017";
+var article = "15 Scissors Tricks to Sphere Your Web React in 2017";
 var author = "Alex Walker ";
 var pubdate = "8/5/2017";
-var seed = "aaaaaaaaaaaaaa"; // Extra randomness if you don't like the default graphic
+var seed = "aaaaa"; // Extra randomness if you don't like the default graphic
 
 var numbers_regex = /\d{1,2} /g;
 
-var numbers = article.match(numbers_regex).map(function(x){ return parseInt(x) });
+var numbers = article.match(numbers_regex).map(function (x) { return parseInt(x); });
 
 
-var iconNames = symbols.map(function(icon){
-  return(icon.substring(6, icon.length));
+var iconNames = symbols.map(function (icon) {
+        return(icon.substring(6, icon.length));
 });
 
 function getIcon(allIcons, title) {
@@ -54,7 +54,7 @@ var titleHash = md5(title);
 var subHash = titleHash.substring(16, 32);
 var randColor = parseInt(subHash, 16) % 255;
 
-//var randColor = Math.floor(Math.random() * 255);
+var randColor = Math.floor(Math.random() * 255);
 
 /* BREAK THE HASH INTO 16 PARTS */
 
@@ -121,6 +121,7 @@ var svg = document.querySelector("#art1");
 
 
 //Get svg element
+k = 0;
 
 function setAttributes(node, attrs) { // pete's function
     for(k in attrs) { node.setAttribute(k, attrs[k]) }
