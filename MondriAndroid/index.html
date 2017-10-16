@@ -1,19 +1,88 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-<title>MondriAndroid</title>
+    <title>MondriAndroid</title>
 
-<style>
-    @import "style.css";
-</style>
+    <style>
+        @import "style.css";
+
+    </style>
 
 </head>
+
 <body>
 
 
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <svg id="art1" viewbox="0 0 1000 610" xmlns="http://www.w3.org/2000/svg">
+<!-- JavaScript does the building in here -->
 
-<svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+</svg>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <svg id="feedback" viewbox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+     <style>
+         .swatch{stroke-width: 1px; stroke: solid; stroke-color: #000;  }
+        </style>
+      <rect class="swatch" id="swatch1" x="1" y="10"/>
+       <rect class="swatch" id="swatch2" x="31" y="10"/>
+        <rect class="swatch" id="swatch3" x="61" y="10"/>
+       <rect class="swatch" id="swatch4" x="91" y="10"/>
+      <text id="hue"  x="1" y="40">Color A: </text>
+      <text id="hue2"  x="1" y="50">Color 2: </text>
+      <text id="hue3"  x="1" y="60">Color 3: </text>
+      <text id="matchednumbers"  x="80" y="40">Matched Number: </text>
+      <text id="orig"  x="1" y="70">Title: </text>
+      <text id="hash"  x="1" y="80">Hash: </text>
+    </svg>
+
+
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>Color Palette</th>
+                <th>Layout Scheme</th>
+                <th>Number scheme</th>
+                <th>Routine</th>
+                <th>Pattern</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>Golden Ratio</td>
+            <td>1</td>
+            <td>Filmstrip-H</td>
+            <td>Tronbikes</td>
+            <td>Dots</td>
+        </tr>
+        <tr>
+            <td>Triad</td>
+            <td>2</td>
+            <td>Filmstrip-V</td>
+            <td>Curves</td>
+            <td>Stripes</td>
+        </tr>
+        <tr>
+            <td>Monotone</td>
+            <td>3</td>
+            <td>Depth</td>
+            <td>Curves</td>
+            <td>Crosshatch</td>
+        </tr>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.7.0/js/md5.min.js"></script>
+    <!-- MD5 generator-->
+    <script src="generator.js"></script>
+
+
+    <!-- everything below here is SVG library symbols -->
+
+    <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
 
 
@@ -927,47 +996,6 @@
 </defs>
 </svg>
 
-
-
-
-<!--<?xml version="1.0" encoding="utf-8"?>-->
-<svg id="art1" viewbox="0 0 1000 610" xmlns="http://www.w3.org/2000/svg">
-<!-- JavaScript does the building in here -->
-
-</svg>
-
-
-<!--<?xml version="1.0" encoding="utf-8"?>-->
-<svg id="feedback" viewbox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
-  <rect class="swatch" id="swatch1" x="1" y="10"/>
-   <rect class="swatch" id="swatch2" x="31" y="10"/>
-    <rect class="swatch" id="swatch3" x="61" y="10"/>
-   <rect class="swatch" id="swatch4" x="91" y="10"/>
-  <text id="hue"  x="1" y="40">Hue: </text>
-  <text id="matchednumbers"  x="40" y="40">Matched Number: </text>
-  <text id="orig"  x="1" y="50">Title: </text>
-  <text id="hash"  x="1" y="60">Hash: </text>
-</svg>
-
-<table>
-  <thead>
-   <tr>
-       <th>Color Palette</th><th>Layout Scheme</th><th>Number scheme</th><th>Routine</th><th>Pattern</th>
-    </tr>
-    </thead>
-    <tr>
-        <td>Golden Ratio</td><td>1</td><td>Filmstrip-H</td><td>Tronbikes</td><td>Dots</td>
-    </tr>
-    <tr>
-        <td>Triad</td><td>2</td><td>Filmstrip-V</td><td>Curves</td><td>Stripes</td>
-    </tr>
-    <tr>
-        <td>Monotone</td><td>3</td><td>Depth</td><td>Curves</td><td>Crosshatch</td>
-    </tr>
-</table>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.7.0/js/md5.min.js"></script> <!-- MD5 -->
-<script src="generator.js"></script>
-
 </body>
+
 </html>
