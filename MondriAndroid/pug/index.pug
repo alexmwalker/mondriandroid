@@ -1,0 +1,33 @@
+doctype html
+html
+    head
+        title MondriAndroid
+        style.
+            @import "/styles/style.css";
+    body
+        // <?xml version="1.0" encoding="utf-8"?>
+        svg#art1(viewBox='0 0 1000 610' xmlns='http://www.w3.org/2000/svg')
+            // JavaScript does the building in here
+            // <?xml version="1.0" encoding="utf-8"?>
+            svg#feedback(viewBox='0 0 200 80' xmlns='http://www.w3.org/2000/svg')
+                style.
+                    .swatch{stroke-width: 1px; stroke: solid; stroke-color: #000;  }
+                rect#swatch1.swatch(x='1' y='10')
+                rect#swatch2.swatch(x='31' y='10')
+                rect#swatch3.swatch(x='61' y='10')
+                rect#swatch4.swatch(x='91' y='10')
+                text#hue(x='1' y='40') Color A: 
+                text#hue2(x='1' y='50') Color 2: 
+                text#hue3(x='1' y='60') Color 3: 
+                text#matchednumbers(x='80' y='40') Matched Number: 
+                text#orig(x='1' y='70') Title: 
+                text#hash(x='1' y='80') Hash: 
+
+            include table
+
+            script(src='scripts/md5.js')
+            // MD5 generator
+            script(src='scripts/generator.js')
+
+            // everything below here is SVG library symbols
+            include svg-library 
