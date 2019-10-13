@@ -15,7 +15,7 @@ var geometric = ['#icon-write', '#icon-wonder', '#icon-win', '#icon-weld', '#ico
 var article = "15 Scissors Tricks to Sphere Your Web React in 2017";
 var author = "Alex Walker ";
 var pubdate = "8/5/2017";
-var seed = "123"; // Extra randomness if you don't like the default graphic
+var seed = "1233"; // Extra randomness if you don't like the default graphic
 
 var numbers_regex = /\d{1,2} /g;
 
