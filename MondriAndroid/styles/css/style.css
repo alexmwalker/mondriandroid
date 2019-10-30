@@ -5,7 +5,7 @@ svg {
   outline: 3px rgba(255, 0, 255, 0.3) dashed; }
 
 #newGraphicnumber {
-  font-family: Helvetica Neue;
+  font-family: 'Helvetica Neue', sans-serif;
   font-weight: 700;
   font-size: 20em;
   opacity: .15;
@@ -47,7 +47,7 @@ svg {
   /*fill: url(#pattern-2-0);*/
   fill: url(#g);
   mix-blend-mode: multiply;
-  patternTransform: scale(0.1);
+  patterntransform: scale(0.1);
   fill-opacity: .3; }
 
 .patternB {
@@ -73,7 +73,7 @@ td {
   height: 2em; }
 
 svg text {
-  font-family: Georgia;
+  font-family: 'Helvetica Neue', sans-serif;
   font-size: 4px; }
 
 /*# sourceMappingURL=style.css.map */

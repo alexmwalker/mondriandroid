@@ -11,7 +11,12 @@
       <!-- <?xml version="1.0" encoding="utf-8"?>-->
     </svg>
     <svg id="feedback" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
-      <style>.swatch{stroke-width: 1px; stroke: #000;  }</style>
+      <style>
+        .swatch{stroke-width: 1px; stroke: #000;}
+        svg text{
+            font-family: 'Helvetica Neue', sans-serif;
+            font-size: 4px;}
+      </style>
       <rect class="swatch" id="swatch1" x="1" y="10" width="10" height="10"></rect>
       <rect class="swatch" id="swatch2" x="31" y="10" width="10" height="10"></rect>
       <rect class="swatch" id="swatch3" x="61" y="10" width="10" height="10"></rect>
@@ -22,6 +27,7 @@
       <text id="matchednumbers" x="80" y="40">Matched Number: </text>
       <text id="orig" x="1" y="70">Title: </text>
       <text id="hash" x="1" y="80">Hash: </text>
+      <text id="selectedsymbol" x="80" y="30">Selectsymbol: </text>
       <table>
         <thead>
           <tr>
@@ -58,8 +64,8 @@
       </table>
       <script src="scripts/md5.js"></script>
       <!-- MD5 generator-->
-      <!--script(src='scripts/generator.js')-->
-      <script src="scripts/v2.js"></script>
+      <script src="scripts/generator.js"></script>
+      <!--script(src='scripts/v2.js')-->
       <!-- everything below here is SVG library symbols-->
       <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>

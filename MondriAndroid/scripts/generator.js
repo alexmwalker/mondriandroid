@@ -12,42 +12,86 @@ var geometric = ['#icon-write', '#icon-wonder', '#icon-win', '#icon-weld', '#ico
 //var testIcons = ['#icon-scissors', '#icon-eye', '#icon-font', '#icon-sphere', '#icon-power-cord'];
 
 
-var article = "15 Scissors Tricks to Sphere Your Web React in 2017";
+// list of active symbols
+var symbolstotal = symbols.length;
+var geometrictotal = geometric.length;
+
+var article = "12 Pacman Tricks to Level-up Your React";
 var author = "Alex Walker ";
 var pubdate = "8/5/2017";
-var seed = "1233"; // Extra randomness if you don't like the default graphic
+var seed = "123"; // Extra randomness if you don't like the default graphic
 
-var numbers_regex = /\d{1,2} /g;
+var numbers_regex = /\d{1,2} /g; // find numbers in title
 
 var numbers = article.match(numbers_regex).map(function (x) {
     return parseInt(x);
 });
+console.log(numbers[0]);
+
 
 
 var iconNames = symbols.map(function (icon) {
-    return (icon.substring(6, icon.length));
+    return (icon.substring(6, icon.length)); // list the Symbol names trimming the 'icon-' bit
 });
 
+
+var articleArr = article.toLowerCase().split(" ");
+console.log('ArticleArr: '+ articleArr);
+console.log('Icon: '+ iconNames);
+//["This", "is", "an", "amazing", "sentence."]
+
+var matchedIcons = new Array();
+
+// function for matching icons to article words
+Array.prototype.diff = function(arr2) {
+    var ret = [];
+    this.sort();
+    arr2.sort();
+    for(var i = 0; i < this.length; i += 1) {
+        if(arr2.indexOf(this[i]) > -1){
+            ret.push(this[i]);
+        }
+    }
+    console.log('Ret: ' + ret);
+    return ret;
+    
+};
+
+console.log(articleArr.diff(iconNames));
+
+matchedIcons = articleArr.diff(iconNames);
+
+
+
+/*
 function getIcon(allIcons, title) {
-    var iconFound = "";
+    var iconFound = ""; // no match yet
 
     allIcons.forEach(function (icon) {
         var regex = new RegExp(icon, 'i');
 
         if (regex.test(title)) {
             iconFound = icon;
+            
             return;
         }
     });
 
     if (iconFound !== "") {
+        console.log('Match found'+ iconFound);
         return iconFound;
+        
     } else {
+        console.log('Prolly no Match found');
         return allIcons[Math.floor(Math.random() * allIcons.length)];
     }
 }
 
-console.log(numbers);
+*/
+
+
+
+
 
 var title = article + author + pubdate + seed; // combine the data into a single DNA sequence
 var titleHash = md5(title); // make an MD5 hash of it
@@ -85,18 +129,27 @@ var binary = new Array();
 
 
 
-// RANDOM SYMBOL SELECTION
-// var selectsymbol = symbols[Math.floor(Math.random() * symbols.length)]; // pick one at random
-var selectsymbol = "#icon-" + getIcon(iconNames, title);
+// RANDOM SYMBOL SELECTION - unique on every reload
+var selectsymbol = symbols[Math.floor(Math.random() * symbols.length)]; // pick one at random
+//var selectsymbol = "#icon-" + getIcon(iconNames, title);
 var selectsymbol2 = geometric[Math.floor(Math.random() * symbols.length)]; // pick one at random
 var selectsymbol3 = geometric[Math.floor(Math.random() * symbols.length)]; // pick one at random
 
 
-// SELECTED NON-RANDOM
-var ss = (symbols.length / 255) * decimal[i];
-//var selectsymbol = symbols[decimal[i]];
+// SELECTED NON-RANDOM - random but tied to specific title - wont change on reload
 
+var focalLock = parseInt(titleHash.substring(10, 12), 16) % symbolstotal ; 
+var bgLock1 = parseInt(titleHash.substring(10, 12), 16) % geometrictotal ; 
+var bgLock2 = parseInt(titleHash.substring(8, 10), 16) % geometrictotal ; 
 
+selectsymbol = symbols[focalLock]; //overriding the random symbol selection
+selectsymbol2 = geometric[bgLock1];
+selectsymbol3 = geometric[bgLock2];
+
+// MATCHES FOUND - title words match icon names in SVG library 
+
+console.log('matched: '+ matchedIcons[0]);
+selectsymbol = '#icon-'+ matchedIcons[0]; 
 
 /* COLOR PALETTE GENERATION */
 // Check to see if basehue has been set : if not use the extracted number (randcolor)
@@ -112,7 +165,7 @@ palette[2] = Math.round(randColor / 1.618);
 console.log("Palette0 is:" + palette[0]);
 console.log("Palette1 is:" + palette[1]);
 console.log("Palette2 is:" + palette[2]);
-
+console.log("Palette2 is:" + palette[2]);
 
 var secondhue = Math.round(basehue * 1.618);
 var thirdhue = Math.round(basehue / 1.618);
@@ -129,7 +182,7 @@ console.log("framecolor is:" + framecolor);
 
 var factorial = function fac(n) { return n < 2 ? 1 : n * fac(n - 1); };
 
-console.log(factorial(3));
+console.log("factorial: "+factorial(3));
 
 // COLOR SWATCHES
 var swatch = document.querySelector("#swatch1");
@@ -243,6 +296,7 @@ setAttributes(newFrame, {
     cy: '200',
     r: '200',
     fill: framecolor,
+    opacity: .75,
     class: 'frame'
 })
 
@@ -299,6 +353,15 @@ matchednumbers.appendChild(numberTxt);
 var hash = document.querySelector("#hash");
 var hashTxt = document.createTextNode(titleHash);
 hash.appendChild(hashTxt);
+
+var selectedsymbol = document.querySelector("#selectedsymbol");
+var currentsymbol = document.createTextNode(selectsymbol);
+selectedsymbol.appendChild(currentsymbol);
+
+
+
+
+
 
 // dropping a table
 

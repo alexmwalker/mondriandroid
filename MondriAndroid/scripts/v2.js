@@ -8,7 +8,7 @@ var rotations = ['rotate-1', 'rotate-2', 'rotate-3'];
 
 // list of active symbols
 
-// RANDOM SYMBOL SELECTION
+// completely RANDOM SYMBOL SELECTION (changes on  reload)
 var selectsymbol = symbols[Math.floor(Math.random() * symbols.length)]; // pick one at random
 var selectsymbol2 = geometric[Math.floor(Math.random() * symbols.length)]; // pick one at random
 var selectsymbol3 = geometric[Math.floor(Math.random() * symbols.length)]; // pick one at random

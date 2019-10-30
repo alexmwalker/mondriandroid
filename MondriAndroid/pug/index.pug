@@ -11,7 +11,10 @@ html
             // <?xml version="1.0" encoding="utf-8"?>
         svg#feedback(viewBox='0 0 200 80' xmlns='http://www.w3.org/2000/svg')
             style.
-                .swatch{stroke-width: 1px; stroke: #000;  }
+                .swatch{stroke-width: 1px; stroke: #000;}
+                svg text{
+                    font-family: 'Helvetica Neue', sans-serif;
+                    font-size: 4px;}
             rect#swatch1.swatch(x='1' y='10' width='10' height='10')
             rect#swatch2.swatch(x='31' y='10' width='10' height='10')
             rect#swatch3.swatch(x='61' y='10' width='10' height='10')
@@ -22,12 +25,13 @@ html
             text#matchednumbers(x='80' y='40') Matched Number: 
             text#orig(x='1' y='70') Title: 
             text#hash(x='1' y='80') Hash: 
+            text#selectedsymbol(x='80' y='30') Selectsymbol: 
 
             include table
 
             script(src='scripts/md5.js')
             // MD5 generator
-            //script(src='scripts/generator.js')
-            script(src='scripts/v2.js')
+            script(src='scripts/generator.js')
+            //script(src='scripts/v2.js')
             // everything below here is SVG library symbols
             include svg-library 
