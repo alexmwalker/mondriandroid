@@ -3,10 +3,11 @@ html
     head
         title MondriAndroid
         style.
-            @import "/styles/style.css";
+            @import "styles/css/style.css";
     body
         // <?xml version="1.0" encoding="utf-8"?>
         svg#art1(viewBox='0 0 1000 610' xmlns='http://www.w3.org/2000/svg')
+
             // JavaScript does the building in here
             // <?xml version="1.0" encoding="utf-8"?>
         svg#feedback(viewBox='0 0 200 80' xmlns='http://www.w3.org/2000/svg')
@@ -27,11 +28,11 @@ html
             text#hash(x='1' y='80') Hash: 
             text#selectedsymbol(x='80' y='30') Selectsymbol: 
 
-            include table
+        include table
 
-            script(src='scripts/md5.js')
-            // MD5 generator
-            script(src='scripts/generator.js')
-            //script(src='scripts/v2.js')
-            // everything below here is SVG library symbols
-            include svg-library 
+        script(src='scripts/md5.js')
+        // MD5 generator
+        script(src='scripts/generator.js')
+        //script(src='scripts/v2.js')
+        // everything below here is SVG library symbols
+        include svg-library 
