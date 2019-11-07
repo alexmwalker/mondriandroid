@@ -16,10 +16,10 @@ var geometric = ['#icon-write', '#icon-wonder', '#icon-win', '#icon-weld', '#ico
 var symbolstotal = symbols.length;
 var geometrictotal = geometric.length;
 
-var article = "12 Pacman Tricks to Level-up Your React";
+var article = "12 React Tricks to Level-up Your Apps";
 var author = "Alex Walker ";
 var pubdate = "8/5/2017";
-var seed = "123"; // Extra randomness if you don't like the default graphic
+var seed = "123456"; // Extra randomness if you don't like the default graphic
 
 var numbers_regex = /\d{1,2} /g; // find numbers in title
 
@@ -288,7 +288,7 @@ setAttributes(newElementGeoA2, {
     x: '20%',
     y: '-30%',
     fill: thirdcolor,
-    class: 'rotate-1'
+    class: 'rotate-2'
 })
 
 setAttributes(newFrame, {
@@ -303,8 +303,8 @@ setAttributes(newFrame, {
 setAttributes(newFocalpoint, { // main icon
     fill: 'rgba(0,0,0,.7)',
     width: '200',
-    x: '20%',
-    y: '-10%',
+    x: '0%',
+    y: '0%',
     class: 'focalpoint'
 })
 

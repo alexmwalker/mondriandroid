@@ -15,7 +15,10 @@ svg {
   transform: skew(-10deg); }
 
 #focalpoint {
-  fill: rbga(140, 45, 100, 0.5); }
+  fill: rbga(140, 45, 100, 0.5);
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%; }
 
 .frame {
   -webkit-transform: rotate(90deg);
@@ -27,21 +30,29 @@ svg {
   fill-opacity: .7; }
 
 .focalpoint {
-  -webkit-transform-origin: 50% 50% 0px;
-  -ms-transform-origin: 50% 50% 0px;
-  transform-origin: 50% 50% 0px; }
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transform: translate(40%, -10%);
+  -ms-transform: translate(40%, -10%);
+  transform: translate(40%, -10%); }
 
 .swatch {
   height: 10px;
   width: 10px; }
 
-.rotate-1 {
+.rotate-1, .rotate-2 {
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
-  -webkit-transform: rotate(1turn);
-  -ms-transform: rotate(1turn);
-  transform: rotate(1turn); }
+  -webkit-transform: rotate(222.48deg);
+  -ms-transform: rotate(222.48deg);
+  transform: rotate(222.48deg); }
+
+.rotate-2 {
+  -webkit-transform: rotate(137.52deg);
+  -ms-transform: rotate(137.52deg);
+  transform: rotate(137.52deg); }
 
 .patternA {
   /*fill: url(#pattern-2-0);*/
