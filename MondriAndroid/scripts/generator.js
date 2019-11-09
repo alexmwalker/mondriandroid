@@ -16,17 +16,17 @@ var geometric = ['#icon-write', '#icon-wonder', '#icon-win', '#icon-weld', '#ico
 var symbolstotal = symbols.length;
 var geometrictotal = geometric.length;
 
-var article = "12 React Tricks to Level-up Your Apps";
+var article = "12 Reaction Tricks to Level-up Your Apps";
 var author = "Alex Walker ";
 var pubdate = "8/5/2017";
-var seed = "123456"; // Extra randomness if you don't like the default graphic
+var seed = "987"; // Extra randomness if you don't like the default graphic
 
 var numbers_regex = /\d{1,2} /g; // find numbers in title
 
 var numbers = article.match(numbers_regex).map(function (x) {
     return parseInt(x);
 });
-console.log(numbers[0]);
+console.log('Numbers found:' + numbers[0]);
 
 
 
@@ -139,18 +139,25 @@ var selectsymbol3 = geometric[Math.floor(Math.random() * symbols.length)]; // pi
 // SELECTED NON-RANDOM - random but tied to specific title - wont change on reload
 
 var focalLock = parseInt(titleHash.substring(10, 12), 16) % symbolstotal ; 
+console.log('FOCALLOCK: '+ focalLock + " -- " + symbols[focalLock]);
 var bgLock1 = parseInt(titleHash.substring(10, 12), 16) % geometrictotal ; 
 var bgLock2 = parseInt(titleHash.substring(8, 10), 16) % geometrictotal ; 
 
-selectsymbol = symbols[focalLock]; //overriding the random symbol selection
+selectsymbol = symbols[focalLock]; //overriding the completely random symbol selection
 selectsymbol2 = geometric[bgLock1];
 selectsymbol3 = geometric[bgLock2];
 
 // MATCHES FOUND - title words match icon names in SVG library 
 
 console.log('matched: '+ matchedIcons[0]);
-selectsymbol = '#icon-'+ matchedIcons[0]; 
 
+if (matchedIcons[0] == ''){ // found a match
+    console.log(' matched IS empty ');
+} else {
+    //selectsymbol = '#icon-'+ matchedIcons[0];
+    console.log(' matched IS NOT empty ' + selectsymbol);
+
+}
 /* COLOR PALETTE GENERATION */
 // Check to see if basehue has been set : if not use the extracted number (randcolor)
 
@@ -165,7 +172,7 @@ palette[2] = Math.round(randColor / 1.618);
 console.log("Palette0 is:" + palette[0]);
 console.log("Palette1 is:" + palette[1]);
 console.log("Palette2 is:" + palette[2]);
-console.log("Palette2 is:" + palette[2]);
+
 
 var secondhue = Math.round(basehue * 1.618);
 var thirdhue = Math.round(basehue / 1.618);
@@ -182,7 +189,7 @@ console.log("framecolor is:" + framecolor);
 
 var factorial = function fac(n) { return n < 2 ? 1 : n * fac(n - 1); };
 
-console.log("factorial: "+factorial(3));
+console.log("factorial: "+factorial(5));
 
 // COLOR SWATCHES
 var swatch = document.querySelector("#swatch1");
