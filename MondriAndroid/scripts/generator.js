@@ -16,7 +16,7 @@ var geometric = ['#icon-write', '#icon-wonder', '#icon-win', '#icon-weld', '#ico
 var symbolstotal = symbols.length;
 var geometrictotal = geometric.length;
 
-var article = "12 Reaction Tricks to Level-up Your Apps";
+var article = "12 CSS3 Tricks to Level-up Your Apps";
 var author = "Alex Walker ";
 var pubdate = "8/5/2017";
 var seed = "987"; // Extra randomness if you don't like the default graphic
@@ -151,10 +151,10 @@ selectsymbol3 = geometric[bgLock2];
 
 console.log('matched: '+ matchedIcons[0]);
 
-if (matchedIcons[0] == ''){ // found a match
+if (matchedIcons[0] == null){ // found a match
     console.log(' matched IS empty ');
 } else {
-    //selectsymbol = '#icon-'+ matchedIcons[0];
+    selectsymbol = '#icon-'+ matchedIcons[0];
     console.log(' matched IS NOT empty ' + selectsymbol);
 
 }

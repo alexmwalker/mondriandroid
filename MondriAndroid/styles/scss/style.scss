@@ -2,10 +2,10 @@ $angle1: 360/100*61.8deg;
 $angle2: 360/100*38.2deg;
 
 svg {
-  width: 60%;
+  max-width: 650px;
   float: left;
   margin-right: 2%;
-  outline: 3px rgba(255,0,255,.3) dashed;
+  outline: 3px rgba(255, 0, 255, .3) dashed;
 }
 
 #newGraphicnumber {
@@ -14,33 +14,38 @@ svg {
   font-size: 20em;
   opacity: .15;
   fill: #fff;
-  transform: skew(-10deg); }
+  transform: skew(-10deg);
+}
 
 #focalpoint {
-  fill: rbga(140, 45, 100, 0.5); 
+  fill: rbga(140, 45, 100, 0.5);
   transform-origin: 50% 50%;
 }
 
 .frame {
   transform: rotate(90deg);
   transform-origin: 50% 50%;
-  fill-opacity: .7; 
+  fill-opacity: .7;
 }
 
 .focalpoint {
-  transform-origin: 50% 50%; 
-  transform: translate(40%, -10%);}
+  transform-origin: 50% 50%;
+  transform: translate(40%, -10%);
+}
 
 .swatch {
   height: 10px;
-  width: 10px; }
-
-.rotate-1, .rotate-2 {
-  transform-origin: 50% 50%;
-  transform: rotate($angle1); 
+  width: 10px;
 }
+
+.rotate-1,
 .rotate-2 {
-  transform: rotate($angle2); 
+  transform-origin: 50% 50%;
+  //transform: rotate($angle1);
+}
+
+.rotate-2 {
+  //transform: rotate($angle2);
 }
 
 .patternA {
@@ -48,12 +53,14 @@ svg {
   fill: url(#g);
   mix-blend-mode: multiply;
   patterntransform: scale(.1);
-  fill-opacity: .3; }
+  fill-opacity: .3;
+}
 
 .patternB {
   fill: url(#pattern-5-1);
   mix-blend-mode: multiply;
-  fill-opacity: .2; }
+  fill-opacity: .2;
+}
 
 .paper {
   fill: url(#pattern-paper);
@@ -62,19 +69,22 @@ svg {
   width: 1000px;
   height: 610px;
 }
+
 g {
   isolation: isolate;
 }
 
 table {
-    width: 60%;
+  width: 60%;
 
 }
-td{
-   outline: 1px #ccc solid;
-    height: 2em;
+
+td {
+  outline: 1px #ccc solid;
+  height: 2em;
 }
-svg text{
+
+svg text {
   font-family: 'Helvetica Neue', sans-serif;
   font-size: 4px;
 }
